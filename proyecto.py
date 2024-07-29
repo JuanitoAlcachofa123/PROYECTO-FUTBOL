@@ -81,6 +81,9 @@ if not os.path.exists("Graficos"):
 # Subir el archivo CSV
 uploaded_file = st.file_uploader("📁 Sube tu archivo CSV", type=["csv"])
 
+"DESCARGAR DATASETS:"
+"LINK: https://github.com/JuanitoAlcachofa123/PROYECTO-FUTBOL.git"
+
 if uploaded_file is not None:
     # Leer el archivo CSV
     try:
@@ -90,6 +93,8 @@ if uploaded_file is not None:
     except Exception as e:
         st.error(f"❌ Error al leer el archivo CSV: {e}")
         st.stop()
+
+        
 
     # Selección de columna para análisis numérico
     columna_analisis = st.selectbox("📈 Selecciona la columna para análisis numérico", df.columns.tolist())
